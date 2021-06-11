@@ -1,0 +1,114 @@
+codecov:
+  notify:
+    wait_for_ci: false
+  require_ci_to_pass: true
+  strict_yaml_branch: master
+  branch: master
+
+coverage:
+  precision: 2
+  round: down
+  range: '70...100'
+
+  status:
+    src:
+      target: auto
+      threshold: 7%
+      base: auto
+      if_ci_failed: success
+      paths:
+        - src/
+      flags:
+        - src
+
+    project:
+      default:
+        base: auto
+        informational: true
+        target: 95%
+        threshold: 1%
+
+    patch:
+      default:
+        informational: true
+        target: 80%
+        threshold: 1%
+    changes: no
+
+  notify:
+    # Wait for reasonable amount of tests to complete before
+    # reporting coverage
+    after_n_builds: 8
+
+  ignore:
+    - '**/generated/**'
+    - 'data'
+    - 'docs'
+    - 'scripts'
+    - 'tests'
+
+flags:
+  core:
+    paths:
+      - core
+    carryforward: true
+  api-alieza:
+    paths:
+      - api/alieza/
+    carryforward: true
+  api-caillen:
+    paths:
+      - api/caillen/
+    carryforward: true
+  api-cenobie:
+    paths:
+      - api/cenobie/
+    carryforward: true
+  api-domino:
+    paths:
+      - api/domino/
+    carryforward: true
+  api-jaydin:
+    paths:
+      - api/jaydin/
+    carryforward: true
+  api-kilan:
+    paths:
+      - api/kilan/
+    carryforward: true
+  api-norene:
+    paths:
+      - api/norene/
+    carryforward: true
+  api-ocie:
+    paths:
+      - api/ocie/
+    carryforward: true
+  api-shaena:
+    paths:
+      - api/shaena/
+    carryforward: true
+  api-unity:
+    paths:
+      - api/unity/
+    carryforward: true
+  api-zylla:
+    paths:
+      - api/zylla/
+    carryforward: true
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: no
+      macro: no
+
+comment:
+  layout: 'header, reach, diff, flags, files, footer'
+  behavior: default
+  require_changes: false
+  require_base: false
+  require_head: true
+  branches: ['master']

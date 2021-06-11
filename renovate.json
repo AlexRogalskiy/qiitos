@@ -17,23 +17,40 @@
         "enabled": true
     },
     "ignoreUnstable": false,
-    "schedule": ["after 10pm every weekday", "before 5am every weekday", "every weekend"],
+    "schedule": [
+        "after 10pm every weekday",
+        "before 5am every weekday",
+        "every weekend"
+    ],
     "automerge": true,
     "automergeType": "branch",
     "major": {
         "automerge": false
     },
-    "packageRules": [
-        {
-            "updateTypes": ["minor", "patch", "pin", "digest"],
-            "automerge": true
-        }
-    ],
     "masterIssue": true,
     "timezone": "Europe/Moscow",
     "rangeStrategy": "bump",
     "commitMessageAction": "Updates",
     "commitMessageTopic": "{{depName}}",
     "commitMessagePrefix": ":arrow_up:",
-    "labels": ["npm dependencies"]
+    "labels": [
+        "npm dependencies"
+    ],
+    "packageRules": [
+        {
+            "updateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ],
+            "automerge": true
+        },
+        {
+            "depTypeList": [
+                "devDependencies"
+            ],
+            "automerge": true
+        }
+    ]
 }

@@ -71,7 +71,7 @@
         "eslint-plugin-spellcheck": "0.0.17",
         "eslint-plugin-unicorn": "33.0.1",
         "husky": "6.0.0",
-        "jest": "27.0.4",
+        "jest": "27.3.0",
         "jest-circus": "27.0.4",
         "jest-emotion": "11.0.0",
         "jsonlint": "1.6.3",

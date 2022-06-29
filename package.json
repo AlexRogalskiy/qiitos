@@ -72,7 +72,7 @@
         "eslint-plugin-unicorn": "33.0.1",
         "husky": "6.0.0",
         "jest": "27.0.4",
-        "jest-circus": "27.0.4",
+        "jest-circus": "28.1.2",
         "jest-emotion": "11.0.0",
         "jsonlint": "1.6.3",
         "lerna": "4.0.0",

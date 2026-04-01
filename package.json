@@ -43,7 +43,7 @@
         "all": "npm run format:all && npm run lint:all && npm run pretty"
     },
     "dependencies": {
-        "lodash": "4.17.21"
+        "lodash": "4.18.1"
     },
     "devDependencies": {
         "@semantic-release/changelog": "5.0.1",
